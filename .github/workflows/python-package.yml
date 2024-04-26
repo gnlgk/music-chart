@@ -8,6 +8,8 @@ on:
     branches: [ "main" ] 
   pull_request:
     branches: [ "main" ]
+  schedule:
+    - cron: '0 2 * * *'
 
 jobs:
   build:
@@ -38,8 +40,8 @@ jobs:
 
     - name: commits
       run: |
-        git config --global user.email "webs9919@gmail.com"
-        git config --global user.name "webs9919"
+        git config --global user.email "gnlgk@gmail.com"
+        git config --global user.name "gnlgk"
         git add bugsChart100_*.json  # 와일드카드 사용
         git commit -m "벅스뮤직 챠트데이터 수집"
 
